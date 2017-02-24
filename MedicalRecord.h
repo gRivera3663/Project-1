@@ -46,9 +46,9 @@ public:
     int numberOfBirths(string filename) {
         ifstream myFile(filename);
         int count = 0;
-        string line;
-        
-        while ( myFile >> line )
+        string name;
+        string weight;
+        while ( myFile >> name >> weight )
         {
             count++;
         }
