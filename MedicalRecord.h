@@ -53,11 +53,15 @@ public:
             count++;
         }
         
+        myFile.close();
+        
         return count;
     }
     
 	// return the number of babies who had birth weight < 2500 grams
 	int numberOfBabiesWithLowBirthWeight() {
+        
+        
 		return -1; // TO BE COMPLETED
 	}
 
