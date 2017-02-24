@@ -42,11 +42,20 @@ public:
 		return "COMPLETE ME"; // TO BE COMPLETED
 	}
 
-	// return the number of baby records loaded from the text file
-	int numberOfBirths() {
-		return -1; // TO BE COMPLETED
-	}
-
+    // return the number of baby records loaded from the text file
+    int numberOfBirths(string filename) {
+        ifstream myFile(filename);
+        int count = 0;
+        string line;
+        
+        while ( myFile >> line )
+        {
+            count++;
+        }
+        
+        return count;
+    }
+    
 	// return the number of babies who had birth weight < 2500 grams
 	int numberOfBabiesWithLowBirthWeight() {
 		return -1; // TO BE COMPLETED
