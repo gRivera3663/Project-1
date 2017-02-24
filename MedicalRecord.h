@@ -47,7 +47,7 @@ public:
         ifstream myFile(filename);
         int count = 0;
         string name;
-        string weight;
+        int weight;
         while ( myFile >> name >> weight )
         {
             count++;
