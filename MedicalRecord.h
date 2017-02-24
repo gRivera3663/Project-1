@@ -77,8 +77,21 @@ public:
 	}
 
 	// return the number of babies who have the name contained in string s
-	int numberOfBabiesWithName(string s) {
-		return -1; // TO BE COMPLETED
+	int numberOfBabiesWithName(string s, string filename) {
+        ifstream myFile(filename);
+        int count;
+        string name;
+        int weight;
+        
+        while (myFile >> name >> weight)
+        {
+            if (name == s)
+            {
+                count++;
+            }
+        }
+        
+        return count;
 	}
 
 private:
