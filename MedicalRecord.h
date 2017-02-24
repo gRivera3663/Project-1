@@ -73,6 +73,8 @@ public:
             }
         }
         
+        myFile.close();
+        
         return count;
 	}
 
