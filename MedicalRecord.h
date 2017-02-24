@@ -45,17 +45,17 @@ public:
     // return the number of baby records loaded from the text file
     int numberOfBirths(string filename) {
         ifstream myFile(filename);
-        int count = 0;
+        number_of_records = 0;
         string name;
         int weight;
         while ( myFile >> name >> weight )
         {
-            count++;
+            number_of_records++;
         }
         
         myFile.close();
         
-        return count;
+        return number_of_records;
     }
     
 	// return the number of babies who had birth weight < 2500 grams
@@ -97,11 +97,23 @@ public:
 	}
 
 private:
+    int number_of_records;
+    
+    string names[number_of_records];
+    int weights[number_of_records];
+    
 	// update the data structure with information contained in Baby object
 	void addEntry(Baby b) {
-		// TO BE COMPLETED
+        
+        names = b.getName();
+        weights = b.getWeight();
 	}
-
+    
+    
+   
+    
+    
+    
 	// Add private member variables for your data structure along with any 
 	// other variables required to implement the public member functions
 
