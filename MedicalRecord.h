@@ -99,8 +99,8 @@ public:
 private:
     int number_of_records;
     
-    string names[number_of_records];
-    int weights[number_of_records];
+    string names[1000];
+    int weights[1000];
     
 	// update the data structure with information contained in Baby object
 	void addEntry(Baby b) {
