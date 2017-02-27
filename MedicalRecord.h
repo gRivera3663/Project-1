@@ -43,18 +43,8 @@ public:
 	}
 
     // return the number of baby records loaded from the text file
-    int numberOfBirths(string filename) {
-        ifstream myFile(filename);
-        number_of_records = 0;
-        string name;
-        int weight;
-        while ( myFile >> name >> weight )
-        {
-            number_of_records++;
-        }
-        
-        myFile.close();
-        
+    int numberOfBirths() {
+        number_of_records = i;
         return number_of_records;
     }
     
