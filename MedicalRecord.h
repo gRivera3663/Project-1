@@ -87,6 +87,7 @@ public:
 	}
 
 private:
+    int i = 0; // used to add names
     int number_of_records;
     
     string names[1000];
@@ -94,9 +95,9 @@ private:
     
 	// update the data structure with information contained in Baby object
 	void addEntry(Baby b) {
-        
-        names = b.getName();
-        weights = b.getWeight();
+        names[i] = b.getName();
+        weights[i] = b.getWeight();
+        i++;
 	}
     
     
