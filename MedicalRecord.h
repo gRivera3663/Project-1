@@ -59,21 +59,15 @@ public:
     }
     
 	// return the number of babies who had birth weight < 2500 grams
-	int numberOfBabiesWithLowBirthWeight(string filename) {
-        ifstream myFile(filename);
+	int numberOfBabiesWithLowBirthWeight() {
         int count;
-        string name;
-        int weight;
-        
-        while (myFile >> name >> weight)
+        for(int i = 0; i < number_of_records; i++)
         {
-            if (weight < 2500)
+            if (weights[i] < 2500)
             {
                 count++;
             }
         }
-        
-        myFile.close();
         
         return count;
 	}
