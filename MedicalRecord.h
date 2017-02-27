@@ -79,15 +79,11 @@ public:
 	}
 
 	// return the number of babies who have the name contained in string s
-	int numberOfBabiesWithName(string s, string filename) {
-        ifstream myFile(filename);
+	int numberOfBabiesWithName(string s) {
         int count;
-        string name;
-        int weight;
-        
-        while (myFile >> name >> weight)
+        for(int i = 0; i < number_of_records; i++)
         {
-            if (name == s)
+            if (names[i] == s)
             {
                 count++;
             }
