@@ -60,7 +60,7 @@ public:
     
 	// return the number of babies who had birth weight < 2500 grams
 	int numberOfBabiesWithLowBirthWeight() {
-        int count;
+        int count = 0;
         for(int i = 0; i < number_of_records; i++)
         {
             if (weights[i] < 2500)
@@ -74,7 +74,7 @@ public:
 
 	// return the number of babies who have the name contained in string s
 	int numberOfBabiesWithName(string s) {
-        int count;
+        int count = 0;
         for(int i = 0; i < number_of_records; i++)
         {
             if (names[i] == s)
