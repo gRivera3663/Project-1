@@ -39,7 +39,16 @@ public:
 
 	// return the most frequently appearing name in the text file
 	string mostPopularName() {
-		return "COMPLETE ME"; // TO BE COMPLETED
+        string name;
+        for (int i = 0; i < number_of_records; i++)
+        {
+            if (name == names[i])
+            {
+                i++;
+            }
+        }
+        
+		return name; // TO BE COMPLETED
 	}
 
     // return the number of baby records loaded from the text file
