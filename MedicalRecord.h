@@ -40,15 +40,50 @@ public:
 	// return the most frequently appearing name in the text file
 	string mostPopularName() {
         string name;
-        for (int i = 0; i < number_of_records; i++)
+        
+        for(int i = 0; i < number_of_records; i++)
         {
-            if (name == names[i])
+            for( int i = 0; i < (number_of_records - 1); i++)
             {
-                i++;
+                if(names[i] > names[i+1])
+                {
+                    string temp;
+                    temp = names[i];
+                    names[i] = names[i+1];
+                    names[i+1] = temp;
+                    
+                }
+                
             }
         }
         
-		return name; // TO BE COMPLETED
+        int top = 0;
+        int next = 0;
+        name = names[0];
+        
+        for (int i = 0; i < number_of_records; i++)
+        {
+            if (names[i] == name)
+            {
+                top++; // 3
+            }
+            else if (names[i] != name)
+            {
+                next++; // 0
+                if (names[i + 1] != names[i])
+                {
+                    next = 0;
+                }
+                if (next > top)
+                {
+                    top = next;
+                    name = names[i];
+                    next = 0;
+                }
+            }
+        }
+        
+		return name;
 	}
 
     // return the number of baby records loaded from the text file
