@@ -9,13 +9,12 @@ using namespace std;
 class MedicalRecord {
 public:
 	// default constructor
-	MedicalRecord() {
-		// TO BE COMPLETED
-	}
+    MedicalRecord() {};
 
 	// destructor
 	~MedicalRecord() {
-		// TO BE COMPLETED
+        delete[] names;
+        delete[] weights;
 	}
 
 	// Load information from a text file with the given filename.
@@ -91,7 +90,7 @@ public:
         number_of_records = i;
         return number_of_records;
     }
-    
+   
 	// return the number of babies who had birth weight < 2500 grams
 	int numberOfBabiesWithLowBirthWeight() {
         int count = 0;
@@ -124,8 +123,8 @@ private:
     int i = 0; // used to add names
     int number_of_records;
     
-    string names[1000];
-    int weights[1000];
+    string *names = new string[1000];
+    int *weights = new int[1000];
     
 	// update the data structure with information contained in Baby object
 	void addEntry(Baby b) {
@@ -133,6 +132,8 @@ private:
         weights[i] = b.getWeight();
         i++;
 	}
+    
+    
 	// Add private member variables for your data structure along with any 
 	// other variables required to implement the public member functions
 
