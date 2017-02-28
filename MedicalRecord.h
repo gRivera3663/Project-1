@@ -133,12 +133,6 @@ private:
         weights[i] = b.getWeight();
         i++;
 	}
-    
-    
-   
-    
-    
-    
 	// Add private member variables for your data structure along with any 
 	// other variables required to implement the public member functions
 
